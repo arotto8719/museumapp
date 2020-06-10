@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+<!--    <meta charset="UTF-8">-->
+<!--    <link href="../static/css/app.css" th:href="@{/css/styles.css}" rel="stylesheet" />-->
+    <!-- Bootstrap stylesheets and script -->
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <link th:href="@{/css/app.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+
+    <title th:text="'Otto Museum Database' + ${title == null ? '' : ' :: ' + title}">Otto Museum Database</title>
+</head>
+
+<body>
+
+<div th:fragment="page-header" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+<!--            <a th:href="@{/}" class="navbar-brand">Database</a>-->
+<!--            <a th:href="@{/}" class="navbar-brand">Images</a>-->
+<!--            <li><a th:href="@{/images}">Images</a></li>-->
+        </div>
+        <div th:fragment="page-header" class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="navbar collapse collapse">
+                <ul class="nav navbar-nav">
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

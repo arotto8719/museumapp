@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container body-content">
+
+<h1>Delete Item</h1>
+
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container body-content">
+<form method="post" style="max-width:600px;">
+    <div class="form-group">
+        <label th:for="name">Name</label>
+        <input class="form-control" th:field="${artifact.name}" />
+        <span th:errors="${artifact.name}" class="error"></span>
+    </div>
+
+    <form method="post" style="max-width:200px;">
+        <div class="form-group">
+            <label th:for="id">ID</label>
+            <input class="form-control" th:field="${artifact.id}" />
+            <span th:errors="${artifact.id}" class="error"></span>
+        </div>
+
+        <form method="post" style="max-width:600px;">
+            <div class="form-group">
+                <label th:for="locations">Location</label>
+                <input class="form-control" th:field="${artifact.location}" />
+                <span th:errors="${artifact.location}" class="error"></span>
+            </div>
+
+            <form method="post" style="max-width:600px;">
+                <div class="form-group">
+                    <label th:for="descriptions">Description</label>
+                    <input class="form-control" th:field="${artifact.description}" />
+                    <span th:errors="${artifact.description}" class="error"></span>
+                </div>
+
+                <input type="delete" value="Delete Item" />
+            </form>
+</body>
+</html>
